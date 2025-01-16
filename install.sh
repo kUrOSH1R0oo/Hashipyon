@@ -14,7 +14,7 @@ check_success() {
 
 if ! pip3 show argon2-cffi > /dev/null 2>&1; then
     echo "[*] Installing argon2-cffi..."
-    pip3 install argon2-cffi
+    pip3 install argon2-cffi --break-system-packages
     check_success "[+] argon2-cffi installation"
 else
     echo "[+] argon2-cffi is already installed."
